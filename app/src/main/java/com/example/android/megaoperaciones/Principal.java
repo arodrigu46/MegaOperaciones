@@ -1,5 +1,6 @@
 package com.example.android.megaoperaciones;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Principal extends AppCompatActivity {
-
+    private Resources resources;
     private TextView res;
     private EditText n1, n2;
     @Override
@@ -21,17 +22,17 @@ public class Principal extends AppCompatActivity {
         res = (TextView) findViewById(R.id.lblResultado);
         n1 = (EditText) findViewById(R.id.txtNum1);
         n2 =(EditText) findViewById(R.id.txtNum2);
-
+        resources = this.getResources();
 
 
     }
     public boolean validar (){
         if(n1.getText().toString().isEmpty()){
-            n1.setError("Digite el número 1");
+            n1.setError(resources.getString(R.string.mensaje_error_num1));
             return false;
         }
         if (n2.getText().toString().isEmpty()){
-            n2.setError("Digite el número 2");
+            n2.setError(resources.getString(R.string.mensaje_error_num2));
             return false;
         }
         return true;
