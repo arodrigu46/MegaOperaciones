@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MegaOperaciones</string>
+    <string name="titulo">Mega Calculadora</string>
+    <string name="resultado">Resultado:</string>
+    <string name="primer_numero">Primer Número</string>
+    <string name="segundo_numero">Segundo Número</string>
+    <string name="calcular">Calcular</string>
+    <string name="borrar">Borrar</string>
 </resources>
