@@ -58,12 +58,14 @@
             android:id="@+id/btnCalcular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="calcular"
             android:text="@string/calcular" />
 
         <Button
             android:id="@+id/btnBorrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="borrar"
             android:text="@string/borrar" />
     </LinearLayout>
 
