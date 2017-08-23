@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Principal extends AppCompatActivity {
     private Resources resources;
@@ -35,6 +36,7 @@ public class Principal extends AppCompatActivity {
         operaciones.setAdapter(adapter);
     }
     public boolean validar (){
+        int posicion = operaciones.getSelectedItemPosition();
         if(n1.getText().toString().isEmpty()){
             n1.setError(resources.getString(R.string.mensaje_error_num1));
             return false;
@@ -43,13 +45,41 @@ public class Principal extends AppCompatActivity {
             n2.setError(resources.getString(R.string.mensaje_error_num2));
             return false;
         }
+        if(Integer.parseInt(n2.getText().toString())==0 && (posicion==3)){
+            Toast.makeText(this, resources.getString(R.string.errorDivisionCero), Toast.LENGTH_SHORT).show();
+
+        }
         return true;
     }
     public void calcular(View v){
+        int opcion;
+        double resultado, num1, num2;
+        resultado=0;
+        res.setText("");
+
         if (validar()) {
-            int num1 = Integer.parseInt(n1.getText().toString());
-            int num2 = Integer.parseInt(n2.getText().toString());
-            int resultado = num1 + num2;
+
+            opcion = operaciones.getSelectedItemPosition();
+            num1 = Double.parseDouble(n1.getText().toString());
+            num2 = Double.parseDouble(n2.getText().toString());
+            switch (opcion){
+                case 0:
+                    resultado = num1+num2;
+                    break;
+                case 1:
+                    resultado = num1-num2;
+                    break;
+                case 2:
+                    resultado = num1*num2;
+                    break;
+                case 3:
+
+                    resultado = num1/num2;
+                    break;
+
+            }
+
+
             res.setText(String.valueOf(resultado));
         }
 
@@ -59,5 +89,6 @@ public class Principal extends AppCompatActivity {
         n1.setText("");
         n2.setText("");
         n1.requestFocus();
+        operaciones.setSelection(0);
     }
 }

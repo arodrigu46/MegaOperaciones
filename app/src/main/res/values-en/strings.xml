@@ -14,4 +14,5 @@
     <string name="resta">Subtraction</string>
     <string name="multiplicacion">Multiplication</string>
     <string name="division">Division</string>
+    <string name="errorDivisionCero">Can not divide between 0</string>
 </resources>

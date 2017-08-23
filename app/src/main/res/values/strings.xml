@@ -19,4 +19,5 @@
         <item>@string/multiplicacion</item>
         <item>@string/division</item>
     </string-array>
+    <string name="errorDivisionCero">No puede dividirse entre 0</string>
 </resources>
