@@ -9,4 +9,9 @@
     <string name="titulo">Mega Calculator</string>
     <string name="mensaje_error_num1">Type number 1</string>
     <string name="mensaje_error_num2">Type number 2</string>
+    <string name="opciones">Operations</string>
+    <string name="suma">Add</string>
+    <string name="resta">Subtraction</string>
+    <string name="multiplicacion">Multiplication</string>
+    <string name="division">Division</string>
 </resources>

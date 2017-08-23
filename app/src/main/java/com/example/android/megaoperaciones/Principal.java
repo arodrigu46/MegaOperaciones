@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class Principal extends AppCompatActivity {
     private Resources resources;
     private TextView res;
     private EditText n1, n2;
+    private Spinner operaciones;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,7 @@ public class Principal extends AppCompatActivity {
         n1 = (EditText) findViewById(R.id.txtNum1);
         n2 =(EditText) findViewById(R.id.txtNum2);
         resources = this.getResources();
+        operaciones = (Spinner)findViewById(R.id.cmbOperaciones);
 
 
     }
